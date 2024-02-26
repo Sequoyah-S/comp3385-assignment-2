@@ -21,6 +21,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/about') }}">About</a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('feedback.create') }}">Feedback</a>
+                </li>
             </ul>
         </div>
     </div>
