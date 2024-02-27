@@ -13,7 +13,19 @@ class FeedbackController extends Controller
     }
     public function send(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'full_name' => 'required',
+            'email' => 'required|email',
+            'comments' => 'required',
+        ]);
 
+        $fullName = $request->input('full_name');
+        $email = $request->input('email');
+        $comments = $request->input('comments');
+    }
+     public function showSuccess()
+    {
+        return view('feedback.success');
     }
 }
 
